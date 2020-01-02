@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "esModuleInterop": true,
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "strict": true,
+        "target": "es5",
+        "rootDirs": [
+            "/src"
+        ],
+        "sourceMap": true,
+        "outDir": "dist"
+    }
+}

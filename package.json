@@ -1,29 +1,29 @@
 {
-  "name": "ts_server_boilerplate",
+  "name": "library",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Kparine/ts_server_boilerplate.git"
+    "test": "./node_modules/mocha/bin/mocha --require ts-node/register src/test/*.test.ts",
+    "build": "tsc"
   },
   "author": "Kevin Parine",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Kparine/ts_server_boilerplate/issues"
-  },
-  "homepage": "https://github.com/Kparine/ts_server_boilerplate#readme",
-  "devDependencies": {
-    "ts-node-dev": "^1.0.0-pre.44",
-    "tslint": "^5.20.1",
-    "typescript": "^3.7.4"
-  },
   "dependencies": {
-    "bcrypt": "^3.0.7",
+    "@types/express": "^4.17.2",
+    "body-parser": "^1.19.0",
     "express": "^4.17.1",
-    "short-uuid": "^3.1.1"
+    "short-uuid": "^3.1.1",
+    "typescript": "^3.7.2"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.17.1",
+    "@types/chai": "^4.2.6",
+    "@types/mocha": "^5.2.7",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^6.2.2",
+    "ts-node-dev": "^1.0.0-pre.44",
+    "tslint": "^5.20.1"
   }
 }
