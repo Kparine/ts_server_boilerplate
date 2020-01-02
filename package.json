@@ -1,0 +1,29 @@
+{
+  "name": "ts_server_boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kparine/ts_server_boilerplate.git"
+  },
+  "author": "Kevin Parine",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kparine/ts_server_boilerplate/issues"
+  },
+  "homepage": "https://github.com/Kparine/ts_server_boilerplate#readme",
+  "devDependencies": {
+    "ts-node-dev": "^1.0.0-pre.44",
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.4"
+  },
+  "dependencies": {
+    "bcrypt": "^3.0.7",
+    "express": "^4.17.1",
+    "short-uuid": "^3.1.1"
+  }
+}
