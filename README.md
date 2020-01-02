@@ -1,9 +1,9 @@
 # ts_server_boilerplate
 
-#### To Compile:
+#### Compile Command:
 
 * Run`tsc`
 
-#### To Run:
+#### Run Node/Express Server Coomand:
 
-* `node dist/index.ts`
+* Run `node dist/index.ts`
