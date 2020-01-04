@@ -6,7 +6,7 @@
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha --require ts-node/register src/test/*.test.ts",
     "build": "tsc",
-    "start": "tsc && node dist/index.js"
+    "start": "nodemon --exec ts-node --files src/index.ts"
   },
   "author": "Kevin Parine",
   "license": "ISC",
@@ -19,13 +19,15 @@
     "typescript": "^3.7.2"
   },
   "devDependencies": {
-    "@types/express": "^4.17.2",
     "@types/body-parser": "^1.17.1",
     "@types/chai": "^4.2.6",
+    "@types/express": "^4.17.2",
     "@types/mocha": "^5.2.7",
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
     "mocha": "^6.2.2",
+    "nodemon": "^2.0.2",
+    "ts-node": "^8.5.4",
     "ts-node-dev": "^1.0.0-pre.44",
     "tslint": "^5.20.1"
   }
