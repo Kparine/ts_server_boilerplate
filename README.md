@@ -2,8 +2,8 @@
 
 #### Compile Command:
 
-* Run`tsc`
+-   Run`tsc`
 
 #### Run Node/Express Server Coomand:
 
-* Run `node dist/index.ts`
+-   Run `node dist/index.ts`

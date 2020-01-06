@@ -5,9 +5,7 @@
         "resolveJsonModule": true,
         "strict": true,
         "target": "es5",
-        "rootDirs": [
-            "/src"
-        ],
+        "rootDirs": ["/src"],
         "sourceMap": true,
         "outDir": "dist"
     }

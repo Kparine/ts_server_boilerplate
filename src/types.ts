@@ -1,16 +1,16 @@
+export interface IPostUser {
+    userFirst: string;
+    userLast: string;
+    userEmail: string;
+    userPhone: string;
+    userPassword: string;
+}
+
 export interface IUser {
     userFirst: string;
     userLast: string;
     userEmail: string;
     userPhone: string;
-    description?: string;
+    userHashPw: string;
     id: string;
-}
-
-export interface ICreateUser {
-    userFirst: string;
-    userLast: string;
-    userEmail: string;
-    userPhone: string;
-    description?: string;
 }
