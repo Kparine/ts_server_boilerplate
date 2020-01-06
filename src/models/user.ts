@@ -21,6 +21,7 @@ export const createUser = async (createdUser: IPostUser): Promise<string> => {
     } else {
         const id: string = short.uuid();
         const userHashPw: string = await bcrypt.hash(createdUser.userPassword, 10);
+        delete createdUser.userPassword;
         const newUser: IUser = { id, userHashPw, ...createdUser };
         users.push(newUser);
         return id;
