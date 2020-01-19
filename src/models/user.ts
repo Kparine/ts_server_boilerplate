@@ -3,7 +3,7 @@ import short from "short-uuid";
 import { IPostUser, IUser } from "../types";
 import * as data from "../users.json";
 
-const users: IUser[] = data.user;
+let users: IUser[] = data.user;
 
 export const getUsers = (): IUser[] => {
     return users;
@@ -39,4 +39,18 @@ export const confirmUserEmail = async (userEmail: string): Promise<boolean> => {
         }
     }
     return false;
+};
+
+export const updateUser = (newUser: IUser): IUser | null => {
+    let found: null | IUser = null;
+    const newUsers: IUser[] = users.map(user => {
+        if (user.id === newUser.id) {
+            found = newUser;
+            return newUser;
+        }
+        return user;
+    });
+    users = newUsers;
+
+    return found;
 };
