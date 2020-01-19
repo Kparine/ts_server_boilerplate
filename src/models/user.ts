@@ -5,6 +5,10 @@ import * as data from "../users.json";
 
 const users: IUser[] = data.user;
 
+export const getUsers = (): IUser[] => {
+    return users;
+};
+
 export const getUser = (id: string): IUser | null => {
     for (const user of users) {
         if (user.id === id) {
