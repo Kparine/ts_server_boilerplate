@@ -43,7 +43,7 @@ export const confirmUserEmail = async (userEmail: string): Promise<boolean> => {
 
 export const updateUser = (newUser: IUser): IUser | null => {
     let found: null | IUser = null;
-    const newUsers: IUser[] = users.map(user => {
+    const newUsers: IUser[] = users.map((user) => {
         if (user.id === newUser.id) {
             found = newUser;
             return newUser;
