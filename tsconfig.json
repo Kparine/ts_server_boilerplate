@@ -3,7 +3,7 @@
         "esModuleInterop": true,
         "moduleResolution": "node",
         "resolveJsonModule": true,
-        "strict": true,
+        "strict": false,
         "target": "es5",
         "rootDirs": ["/src"],
         "sourceMap": true,

@@ -10,12 +10,14 @@ export const getUsers = (): IUser[] => {
 };
 
 export const getUser = (id: string): IUser | null => {
-    for (const user of users) {
+    let search: null | IUser = null;
+    users.filter((user) => {
         if (user.id === id) {
-            return user;
+            search = user;
+            return search;
         }
-    }
-    return null;
+    }, null);
+    return search;
 };
 
 export const createUser = async (createdUser: IPostUser): Promise<string> => {
@@ -43,14 +45,34 @@ export const confirmUserEmail = async (userEmail: string): Promise<boolean> => {
 
 export const updateUser = (newUser: IUser): IUser | null => {
     let found: null | IUser = null;
-    const newUsers: IUser[] = users.map((user) => {
-        if (user.id === newUser.id) {
-            found = newUser;
-            return newUser;
-        }
-        return user;
+    const newUsers: IUser[] = users.filter((user) => {
+        user.id === newUser.id;
     });
+
+    //find the user by id
+
+    // update the user fields
+
+    // return user
+
+    // .filter(user => user.id === users.id ) => {
+    //     console.log("user ******------>>>>>>", user);
+
+    //     if (user.id === newUser.id) {
+    //         console.log("newUser.id ******------>>>>>>", newUser.id);
+    //         console.log("user ******------>>>>>>", user);
+
+    //         // console.log("found ******------>>>>>>", found);
+    //         // console.log("newUser ******------>>>>>>", newUser);
+
+    //         found = newUser;
+    //         return newUser;
+    //     }
+    //     return user;
+    // });
     users = newUsers;
 
     return found;
 };
+
+// Update is currently creating a new user and not hashing the password
